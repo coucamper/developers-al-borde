@@ -232,6 +232,9 @@ const updateParallax = () => {
   });
 };
 
+
+// commnt
+
 hydrateProgress();
 applyTheme(readTheme() || "dark");
 applyStage(currentStage);
