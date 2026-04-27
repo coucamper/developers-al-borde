@@ -1,1018 +1,1096 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Guía honesta para desarrolladores junior: la verdad de la profesión, debug, git, entornos, comunicación, aprendizaje y crecimiento profesional."
-    />
-    <title>Developers al borde | La verdad para juniors</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-  </head>
-  <body data-stage="landing">
-    <div class="noise" aria-hidden="true"></div>
-    <div class="page-glow page-glow-left" aria-hidden="true"></div>
-    <div class="page-glow page-glow-right" aria-hidden="true"></div>
 
-    <header class="hero section-shell" id="top">
-      <nav class="topbar">
-        <span class="brand">Manual honesto para desarrolladores junior</span>
-        <div class="topbar-actions">
-          <button
-            class="theme-toggle"
-            id="theme-toggle"
-            type="button"
-            aria-pressed="false"
-            aria-label="Cambiar a tema claro"
-          >
-            <span class="theme-toggle-label">Tema claro</span>
-          </button>
-          <a class="toplink" href="#programa">Entrar al manual</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Guía honesta para desarrolladores junior: la verdad de la profesión, debug, git, entornos, comunicación, aprendizaje y crecimiento profesional." />
+  <title>Developers al borde | La verdad para juniors</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body data-stage="landing">
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-glow page-glow-left" aria-hidden="true"></div>
+  <div class="page-glow page-glow-right" aria-hidden="true"></div>
+
+  <header class="hero section-shell" id="top">
+    <nav class="topbar">
+      <span class="brand">Manual honesto para desarrolladores junior</span>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"
+          aria-label="Cambiar a tema claro">
+          <span class="theme-toggle-label">Tema claro</span>
+        </button>
+        <a class="toplink" href="#programa">Entrar al manual</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Escrito como te lo diría un líder técnico con demasiados incendios vividos</p>
+        <h1>Si eres junior, nadie te ha contado del todo la verdad de esta profesión. Vamos a arreglar eso.</h1>
+        <p class="hero-text">
+          En la universidad te enseñan sintaxis, algoritmos y proyectos limpios. El trabajo real va de otra cosa:
+          entender sistemas que no hiciste tú, DEPURAR bugs que nadie comprende, tocar código legacy sin romper
+          producción, hablar con personas no técnicas, escribir PR que se entiendan y aprender sin vender humo.
+          Esta app está hecha para hablarte claro y ayudarte a convertirte en un desarrollador junior, pero profesional.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#programa">Quiero crecer de verdad</a>
+          <a class="button button-secondary" href="#impacto">Ver principios base</a>
         </div>
-      </nav>
 
-      <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Escrito como te lo diría un líder técnico con demasiados incendios vividos</p>
-          <h1>Si eres junior, nadie te ha contado del todo la verdad de esta profesión. Vamos a arreglar eso.</h1>
-          <p class="hero-text">
-            En la universidad te enseñan sintaxis, algoritmos y proyectos limpios. El trabajo real va de otra cosa:
-            entender sistemas que no hiciste tú, DEPURAR bugs que nadie comprende, tocar código legacy sin romper
-            producción, hablar con personas no técnicas, escribir PR que se entiendan y aprender sin vender humo.
-            Esta app está hecha para hablarte claro y ayudarte a convertirte en un desarrollador junior, pero profesional.
+        <ul class="hero-pills" aria-label="ideas clave">
+          <li>Menos ego, más método</li>
+          <li>Menos magia, más evidencia</li>
+          <li>Menos pose, más fiabilidad</li>
+        </ul>
+      </div>
+
+      <div class="hero-panel reveal" aria-hidden="true">
+        <div class="dashboard-card main-card">
+          <span class="card-kicker">La verdad corta</span>
+          <strong>Lo que te hará crecer no es parecer brillante. Es ser fiable cuando el trabajo se pone
+            confuso.</strong>
+          <p>
+            Un junior profesional no impresiona por hablar difícil. Impresiona porque entiende el problema, hace
+            preguntas útiles, depura con método, usa git con cabeza y no mezcla entornos, datos ni decisiones sin
+            pensar.
           </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="#programa">Quiero crecer de verdad</a>
-            <a class="button button-secondary" href="#impacto">Ver principios base</a>
+          <div class="meter">
+            <span style="--value: 93%"></span>
           </div>
-
-          <ul class="hero-pills" aria-label="ideas clave">
-            <li>Menos ego, más método</li>
-            <li>Menos magia, más evidencia</li>
-            <li>Menos pose, más fiabilidad</li>
+          <ul class="signal-list">
+            <li>Sabes decir "no lo sé aún, pero ya descarté esto, esto y esto"</li>
+            <li>Tu código llega con contexto, pruebas y menos sorpresas</li>
+            <li>El equipo confía en ti porque reduces ruido, no porque hagas teatro</li>
           </ul>
         </div>
 
-        <div class="hero-panel reveal" aria-hidden="true">
-          <div class="dashboard-card main-card">
-            <span class="card-kicker">La verdad corta</span>
-            <strong>Lo que te hará crecer no es parecer brillante. Es ser fiable cuando el trabajo se pone confuso.</strong>
-            <p>
-              Un junior profesional no impresiona por hablar difícil. Impresiona porque entiende el problema, hace
-              preguntas útiles, depura con método, usa git con cabeza y no mezcla entornos, datos ni decisiones sin pensar.
-            </p>
-            <div class="meter">
-              <span style="--value: 93%"></span>
-            </div>
-            <ul class="signal-list">
-              <li>Sabes decir "no lo sé aún, pero ya descarté esto, esto y esto"</li>
-              <li>Tu código llega con contexto, pruebas y menos sorpresas</li>
-              <li>El equipo confía en ti porque reduces ruido, no porque hagas teatro</li>
-            </ul>
-          </div>
-
-          <div class="dashboard-card side-card">
-            <span class="card-kicker">Regla madre</span>
-            <p>Primero entiende.</p>
-            <p>Luego toca.</p>
-            <p>Y deja el sistema mejor de como lo encontraste.</p>
-          </div>
+        <div class="dashboard-card side-card">
+          <span class="card-kicker">Regla madre</span>
+          <p>Primero entiende.</p>
+          <p>Luego toca.</p>
+          <p>Y deja el sistema mejor de como lo encontraste.</p>
         </div>
       </div>
+    </div>
 
-      <div class="hero-marquee reveal" aria-label="frases directas para juniors">
-        <div class="hero-marquee-track">
-          <span>debug no es adivinar</span>
-          <span>git no es opcional</span>
-          <span>el usuario importa aunque no lo veas</span>
-          <span>cada entorno tiene sus propias URLs y riesgos</span>
-          <span>tu reputación se construye en los detalles</span>
-        </div>
-        <div class="hero-marquee-track" aria-hidden="true">
-          <span>debug no es adivinar</span>
-          <span>git no es opcional</span>
-          <span>el usuario importa aunque no lo veas</span>
-          <span>cada entorno tiene sus propias URLs y riesgos</span>
-          <span>tu reputación se construye en los detalles</span>
-        </div>
+    <div class="hero-marquee reveal" aria-label="frases directas para juniors">
+      <div class="hero-marquee-track">
+        <span>debug no es adivinar</span>
+        <span>git no es opcional</span>
+        <span>el usuario importa aunque no lo veas</span>
+        <span>cada entorno tiene sus propias URLs y riesgos</span>
+        <span>tu reputación se construye en los detalles</span>
       </div>
-    </header>
-
-    <main id="programa" class="program">
-      <section class="story-intro section-shell reveal">
-        <p class="section-label">Antes de empezar</p>
-        <h2>La profesión real no se parece a los ejercicios de clase, y cuanto antes lo entiendas, mejor te irá.</h2>
-        <p>
-          Casi nadie entra al mercado sabiendo leer un sistema ajeno, investigar incidentes, hablar con negocio o pensar
-          en impacto operacional. No es culpa tuya. Pero si quieres crecer, tienes que aceptar una verdad incómoda:
-          tu carrera va a avanzar más por tus hábitos que por tus conocimientos aislados.
-        </p>
-      </section>
-
-      <section class="section-shell reveal" id="oferta">
-        <div class="offer-grid">
-          <article class="offer-card offer-card-highlight">
-            <p class="section-label">Qué vas a encontrar aquí</p>
-            <h3>Consejos de trinchera para trabajar mejor desde ya.</h3>
-            <p>
-              Nada de "cree en ti" ni listas vacías. Aquí hay criterio operativo: cómo pensar, cómo preguntar, cómo
-              DEPURAR, cómo versionar, cómo probar, cómo escalar dudas y cómo aprender sin reventarte por dentro.
-            </p>
-            <div class="microcopy">
-              <span>Hábitos diarios</span>
-              <span>Reglas de seguridad</span>
-              <span>Crecimiento realista</span>
-            </div>
-          </article>
-
-          <article class="offer-card">
-            <p class="section-label">Lo que nadie te dice</p>
-            <ul class="offer-list">
-              <li>No se espera que lo sepas todo, pero sí que aprendas sin esconderte.</li>
-              <li>El código limpio importa, pero entender el problema importa antes.</li>
-              <li>La comunicación pesa tanto como la implementación.</li>
-              <li>Producción castiga la improvisación mucho más que la escuela.</li>
-            </ul>
-          </article>
-
-          <article class="offer-card">
-            <p class="section-label">Lo que sí se espera de ti</p>
-            <ul class="offer-list">
-              <li>Honestidad técnica cuando algo no está claro.</li>
-              <li>Curiosidad disciplinada en vez de toqueteo nervioso.</li>
-              <li>Respeto por el historial, los datos y el trabajo de otros.</li>
-              <li>Capacidad de aprender y mejorar semana a semana.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell reveal">
-        <div class="proof-grid">
-          <article class="proof-card">
-            <strong>Fiabilidad</strong>
-            <p>cumples, avisas, preguntas bien y no escondes riesgos</p>
-          </article>
-          <article class="proof-card">
-            <strong>Método</strong>
-            <p>reproduces, observas, aíslas y decides con evidencia</p>
-          </article>
-          <article class="proof-card">
-            <strong>Criterio</strong>
-            <p>piensas en usuario, cliente, equipo, sistema y coste</p>
-          </article>
-          <article class="proof-card">
-            <strong>Crecimiento</strong>
-            <p>aprendes de forma sostenida sin confundir horas con progreso</p>
-          </article>
-        </div>
-      </section>
-
-      <div class="learning-shell section-shell">
-        <aside class="mission-panel reveal" aria-label="panel de control del itinerario">
-          <div class="mission-card">
-            <p class="section-label">Tu etapa</p>
-            <div class="stage-switcher" role="tablist" aria-label="Cambiar capa de madurez">
-              <button class="stage-tab is-active" type="button" data-stage-tab="landing" role="tab" aria-selected="true">
-                <span>Primeros 90 días</span>
-                <small>sobrevivir sin caos y aprender a orientarte</small>
-              </button>
-              <button class="stage-tab" type="button" data-stage-tab="traction" role="tab" aria-selected="false">
-                <span>Entrega fiable</span>
-                <small>hacer trabajo útil con menos supervisión</small>
-              </button>
-              <button class="stage-tab" type="button" data-stage-tab="stewardship" role="tab" aria-selected="false">
-                <span>Criterio profesional</span>
-                <small>reducir ruido y proteger mejor al equipo</small>
-              </button>
-            </div>
-
-            <div class="stage-brief">
-              <strong id="stage-name">Primeros 90 días</strong>
-              <p id="stage-description">
-                Tu misión no es impresionar. Es entender el terreno, aprender el flujo y dejar de romper cosas por precipitarte.
-              </p>
-            </div>
-
-            <div class="progress-ring" role="img" aria-label="Progreso total de la capa activa">
-              <div class="progress-ring-inner">
-                <span id="progress-percent">0%</span>
-                <small>asimilado</small>
-              </div>
-            </div>
-
-            <div class="progress-stats">
-              <div>
-                <strong id="progress-completed">0</strong>
-                <span>items completados</span>
-              </div>
-              <div>
-                <strong id="progress-total">0</strong>
-                <span>items totales</span>
-              </div>
-            </div>
-
-            <button class="button button-secondary panel-button" id="reset-progress" type="button">
-              Reiniciar progreso de esta etapa
-            </button>
-          </div>
-
-          <div class="module-nav-card">
-            <p class="section-label">Mapa de oficio</p>
-            <ol class="module-nav">
-              <li data-module-ref="critical">
-                <a href="#critical">
-                  <span>01</span>
-                  <strong>La verdad del oficio</strong>
-                  <small>qué se espera de ti de verdad</small>
-                </a>
-              </li>
-              <li data-module-ref="autonomy">
-                <a href="#autonomy">
-                  <span>02</span>
-                  <strong>Debug y pruebas</strong>
-                  <small>cómo investigar sin disparar a ciegas</small>
-                </a>
-              </li>
-              <li data-module-ref="testing">
-                <a href="#testing">
-                  <span>03</span>
-                  <strong>Git y colaboración</strong>
-                  <small>historial, PR y cambios seguros</small>
-                </a>
-              </li>
-              <li data-module-ref="legacy">
-                <a href="#legacy">
-                  <span>04</span>
-                  <strong>Entornos y producción</strong>
-                  <small>URLs, datos, logs y respeto por el riesgo</small>
-                </a>
-              </li>
-              <li data-module-ref="craft">
-                <a href="#craft">
-                  <span>05</span>
-                  <strong>Crecer fuera del horario</strong>
-                  <small>aprendizaje, carrera y salud mental</small>
-                </a>
-              </li>
-            </ol>
-          </div>
-        </aside>
-
-        <div class="module-stack">
-          <section class="learning-module reveal" id="critical" data-module="critical" data-module-title="La verdad del oficio">
-            <div class="module-head">
-              <div class="module-heading">
-                <p class="section-label">Módulo 01</p>
-                <h2>La profesión no recompensa al que parece listo. Recompensa al que reduce riesgo y genera confianza.</h2>
-                <p class="phase-text">
-                  Te va a ir mejor el día que entiendas esto: en un equipo serio, el valor no está en "saber mucho",
-                  sino en ser útil de forma repetible. Eso significa entender antes de tocar, avisar antes de chocar,
-                  y pensar antes de defender una idea por orgullo.
-                </p>
-              </div>
-
-              <div class="module-visual module-visual-illusion">
-                <div class="visual-orbit"></div>
-                <div class="quote-stack">
-                  <article>
-                    <strong>Modo estudiante</strong>
-                    <p>Quiero acabar la tarea.</p>
-                  </article>
-                  <article>
-                    <strong>Modo profesional</strong>
-                    <p>Quiero resolver el problema sin crear dos nuevos.</p>
-                  </article>
-                </div>
-              </div>
-            </div>
-
-            <div class="stage-panel-grid">
-              <article class="stage-pane is-active" data-stage-pane="landing">
-                <span class="stage-pane-kicker">Primeros 90 días</span>
-                <h3>Tu trabajo es ubicarte, entender y no correr más de la cuenta.</h3>
-                <p>Nadie serio espera genialidad instantánea. Sí espera humildad, método y capacidad de escucha.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="traction">
-                <span class="stage-pane-kicker">Entrega fiable</span>
-                <h3>Ya tienes que dejar menos supervisión y menos incertidumbre detrás.</h3>
-                <p>Empiezas a ser alguien a quien se le pueden delegar cambios concretos con confianza.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="stewardship">
-                <span class="stage-pane-kicker">Criterio profesional</span>
-                <h3>Tu presencia mejora conversaciones, no solo tickets.</h3>
-                <p>Aquí se nota que piensas como parte del sistema, no como una persona aislada con teclado.</p>
-              </article>
-            </div>
-
-            <div class="task-card">
-              <p class="task-card-title">Checklist de asimilación</p>
-
-              <div class="task-list is-active" data-stage-tasks="landing">
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-critical-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Dejo de medir mi valor por la velocidad y empiezo a medirlo por la fiabilidad.</strong>
-                    <small>Ir rápido rompiendo cosas no impresiona a nadie durante mucho tiempo.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-critical-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Cuando no entiendo algo, digo exactamente qué parte no entiendo.</strong>
-                    <small>La precisión al preguntar es una skill diferencial desde muy pronto.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-critical-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Escucho más de lo que defiendo mi primera idea.</strong>
-                    <small>Tu primera lectura del sistema casi nunca será la correcta del todo.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="traction">
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-critical-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Antes de proponer una solución, puedo resumir el problema, el impacto y el riesgo.</strong>
-                    <small>Eso te saca del modo ejecutor y te mete en modo profesional.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-critical-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Aviso pronto cuando algo amenaza plazo, calidad o entendimiento.</strong>
-                    <small>Las malas noticias dadas temprano son gestionables. Tarde, no.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-critical-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Diferencio urgencia de ruido y petición de necesidad real.</strong>
-                    <small>No todo lo que grita fuerte merece tocarse primero.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="stewardship">
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-critical-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Ayudo a otros a trabajar con calma cuando hay presión.</strong>
-                    <small>La serenidad bien fundada es una forma de liderazgo técnico.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-critical-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Puedo explicar decisiones técnicas sin esconderme detrás de jerga.</strong>
-                    <small>Si no puedes traducirlo, probablemente no lo entiendes lo suficiente.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-critical-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Mi criterio reduce errores evitables y discusiones vacias.</strong>
-                    <small>Eso vale mucho más que cualquier pose de persona brillante.</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </section>
-
-          <section class="learning-module reveal" id="autonomy" data-module="autonomy" data-module-title="Debug y pruebas">
-            <div class="module-head">
-              <div class="module-heading">
-                <p class="section-label">Módulo 02</p>
-                <h2>Debug no es tocar cosas hasta que desaparece el error. Debug es investigar.</h2>
-                <p class="phase-text">
-                  Si haces carrera en software, vas a pasar una parte enorme de tu vida depurando sistemas rotos,
-                  incompletos o raros. Cuanto antes desarrolles un método de investigación, antes dejarás de sentir
-                  que todo bug es un ataque personal a tu inteligencia.
-                </p>
-              </div>
-
-              <div class="module-visual module-visual-console">
-                <div class="console-frame">
-                  <span>síntoma observado</span>
-                  <span>hipótesis concreta</span>
-                  <span>prueba aislada</span>
-                  <span>causa confirmada</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="stage-panel-grid">
-              <article class="stage-pane is-active" data-stage-pane="landing">
-                <span class="stage-pane-kicker">Primeros 90 días</span>
-                <h3>Primero reproduce y observa. No cambies cinco cosas a la vez.</h3>
-                <p>Logs, inputs, pasos, entorno y datos valen más que intuiciones dramáticas.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="traction">
-                <span class="stage-pane-kicker">Entrega fiable</span>
-                <h3>Tu investigación ya debe dejar una ruta clara desde el fallo hasta la causa.</h3>
-                <p>Escalas mejor, te ayudas mejor y corriges con mucha menos lotería.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="stewardship">
-                <span class="stage-pane-kicker">Criterio profesional</span>
-                <h3>No solo arreglas bugs: mejoras la capacidad del sistema para explicarse.</h3>
-                <p>Observabilidad, logs útiles y documentación de causa raíz también forman parte del oficio.</p>
-              </article>
-            </div>
-
-            <div class="task-card">
-              <p class="task-card-title">Checklist de asimilación</p>
-
-              <div class="task-list is-active" data-stage-tasks="landing">
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-autonomy-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Antes de tocar código, intento reproducir el problema de forma estable.</strong>
-                    <small>Si no puedes reproducirlo, tu fix será mucho más débil de lo que crees.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-autonomy-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Uso la consola, logs y breakpoints para responder preguntas concretas.</strong>
-                    <small>No se trata de imprimir por imprimir; se trata de obtener evidencia.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-autonomy-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Separo síntoma, sospecha y causa confirmada.</strong>
-                    <small>Esa separación mental te ahorra muchos parches falsos.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="traction">
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-autonomy-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Cuando escalo un bug, aporto pasos, entorno, datos, evidencias y mi mejor hipótesis.</strong>
-                    <small>Escalar con contexto demuestra madurez, no debilidad.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-autonomy-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>No mezclo arreglo, refactor y limpieza estética cuando estoy corrigiendo un bug delicado.</strong>
-                    <small>Un cambio enfocado es mucho más seguro y revisable.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-autonomy-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Después del fix, pienso cómo probar que no rompí otra cosa alrededor.</strong>
-                    <small>El trabajo no termina cuando desaparece el error visible.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="stewardship">
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-autonomy-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Identifico patrones de fallos repetidos y propongo mejoras para prevenirlos.</strong>
-                    <small>Buen debug también mejora el sistema, no solo el ticket actual.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-autonomy-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Me preocupo por los mensajes de error, trazas y señales que verá quien depure después.</strong>
-                    <small>Hoy depuras tú; mañana puede DEPURAR otra persona medio dormida a las 3 AM.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-autonomy-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Enseño procesos de investigación, no soluciones mágicas que nadie entiende.</strong>
-                    <small>El equipo crece cuando el método se comparte.</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </section>
-
-          <section class="learning-module reveal" id="testing" data-module="testing" data-module-title="Git y colaboracion">
-            <div class="module-head">
-              <div class="module-heading">
-                <p class="section-label">Módulo 03</p>
-                <h2>Git no es una molestia alrededor del trabajo. Git es una parte central del trabajo.</h2>
-                <p class="phase-text">
-                  Si no dominas git, vas a sufrir más de la cuenta y vas a hacer sufrir al equipo. Tu historial,
-                  tus commits y tus PR dicen mucho de tu forma de pensar. Un junior fuerte aprende pronto que versionar
-                  bien no es una formalidad: es seguridad, claridad y colaboración.
-                </p>
-              </div>
-
-              <div class="module-visual module-visual-matrix">
-                <div class="matrix-grid">
-                  <span>status</span>
-                  <span>diff</span>
-                  <span>commit</span>
-                  <span>branch</span>
-                  <span>review</span>
-                  <span>rollback</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="stage-panel-grid">
-              <article class="stage-pane is-active" data-stage-pane="landing">
-                <span class="stage-pane-kicker">Primeros 90 días</span>
-                <h3>Aprende a leer tu estado actual antes de hacer comandos por reflejo.</h3>
-                <p>Qué cambiaste, dónde estás, contra qué comparas y qué vas a subir debería quedarte claro siempre.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="traction">
-                <span class="stage-pane-kicker">Entrega fiable</span>
-                <h3>Tus commits y PR ya deben facilitar la revisión en vez de sabotearla.</h3>
-                <p>Un buen diff cuenta una historia limpia, reversible y facil de entender.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="stewardship">
-                <span class="stage-pane-kicker">Criterio profesional</span>
-                <h3>Usas git para investigar, proteger despliegues y hacer mejor al equipo.</h3>
-                <p>Ya no solo versionas código. Gestionas riesgo y trazabilidad.</p>
-              </article>
-            </div>
-
-            <div class="task-card">
-              <p class="task-card-title">Checklist de asimilación</p>
-
-              <div class="task-list is-active" data-stage-tasks="landing">
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-testing-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Antes de commitear, reviso mi diff y entiendo cada línea que subí.</strong>
-                    <small>Si no lo entiendes tú, menos lo entenderá quien revise.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-testing-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Hago commits pequeños con mensajes útiles y con una sola intención principal.</strong>
-                    <small>Un historial limpio te salva más veces de las que imaginas.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-testing-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>No pego comandos de internet o del chat sin entender qué efecto tendrán en mi rama e historial.</strong>
-                    <small>Git castiga la obediencia automática.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="traction">
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-testing-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Mis PR explican qué cambia, por qué cambia, cómo lo probé y qué riesgo veo.</strong>
-                    <small>La revisión mejora mucho cuando entregas contexto, no solo código.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-testing-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Cuando hay conflictos, resuelvo entendiendo ambas versiones, no pulsando aceptar por cansancio.</strong>
-                    <small>Muchos bugs nacen exactamente ahí.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-testing-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Pienso en revertibilidad: si esto sale mal, sé qué camino nos deja volver atrás con menos daño.</strong>
-                    <small>Trabajar con red de seguridad es una marca de madurez.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="stewardship">
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-testing-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Uso el historial para investigar regresiones y entender decisiones pasadas.</strong>
-                    <small>Git también es memoria operativa del equipo.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-testing-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Ayudo a otros a mejorar la calidad de sus PR con feedback claro y respetuoso.</strong>
-                    <small>La revisión de código bien hecha forma personas, no solo corrige líneas.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-testing-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Se distinguir cuando una operacion de git es segura y cuando es mejor pedir apoyo antes.</strong>
-                    <small>El orgullo también rompe historial.</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </section>
-
-          <section class="learning-module reveal" id="legacy" data-module="legacy" data-module-title="Entornos y producción">
-            <div class="module-head">
-              <div class="module-heading">
-                <p class="section-label">Módulo 04</p>
-                <h2>Desarrollo, QA, pre y producción no son el mismo sitio con distinto color. Son mundos distintos.</h2>
-                <p class="phase-text">
-                  Te tienes que grabar esto en fuego: cada entorno tiene sus propias URLs, bases de datos, servidores,
-                  credenciales, volumen de datos, permisos y riesgos. Confundirlos no es un despiste simpático; puede
-                  costar dinero, confianza o una incidencia seria.
-                </p>
-              </div>
-
-              <div class="module-visual module-visual-diagram">
-                <div class="diagram-grid">
-                  <article><strong>Local</strong><span>para romper y aprender</span></article>
-                  <article><strong>QA</strong><span>para validar flujos</span></article>
-                  <article><strong>Pre</strong><span>para acercarte a la realidad</span></article>
-                  <article><strong>Prod</strong><span>para respetarla mucho</span></article>
-                </div>
-              </div>
-            </div>
-
-            <div class="stage-panel-grid">
-              <article class="stage-pane is-active" data-stage-pane="landing">
-                <span class="stage-pane-kicker">Primeros 90 días</span>
-                <h3>Aprende qué entorno estás mirando antes de mirar cualquier otra cosa.</h3>
-                <p>Una URL, una base de datos o un log mal interpretado te pueden llevar a decisiones pésimas.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="traction">
-                <span class="stage-pane-kicker">Entrega fiable</span>
-                <h3>Ya debes sospechar pronto de configuración, permisos, datos y dependencias externas.</h3>
-                <p>Muchos fallos no son de código puro, sino de integración y contexto.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="stewardship">
-                <span class="stage-pane-kicker">Criterio profesional</span>
-                <h3>Tu forma de trabajar reduce la probabilidad de errores de entorno y despliegue.</h3>
-                <p>Ayudas a que lo peligroso sea visible y a que los límites estén mejor definidos.</p>
-              </article>
-            </div>
-
-            <div class="task-card">
-              <p class="task-card-title">Checklist de asimilación</p>
-
-              <div class="task-list is-active" data-stage-tasks="landing">
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-legacy-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Confirmo siempre en qué entorno estoy antes de probar, DEPURAR o tocar datos.</strong>
-                    <small>Hazlo aunque te parezca obvio. Los errores graves suelen empezar por algo "obvio".</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-legacy-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Entiendo que cada entorno tiene sus propias URLs, bases de datos, servidores y credenciales.</strong>
-                    <small>No se copian configuraciones ni se asumen equivalencias a ciegas.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-legacy-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>No hardcodeo secretos ni comparto accesos como si fueran apuntes de clase.</strong>
-                    <small>La seguridad profesional empieza por pequeños hábitos.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="traction">
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-legacy-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Cuando algo falla, reviso también variables, permisos, datos de prueba, colas, cron y servicios externos.</strong>
-                    <small>El sistema real es más grande que tu módulo.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-legacy-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Documento incidencias indicando entorno exacto, pasos, hora, datos y dependencias implicadas.</strong>
-                    <small>Sin ese contexto, muchas investigaciones arrancan cojas.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-legacy-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Recuerdo siempre que "en local funciona" no demuestra casi nada por sí solo.</strong>
-                    <small>Permisos, datos y tráfico reales cuentan otra historia.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="stewardship">
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-legacy-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Propongo convenciones y validaciones para que sea más difícil confundirse de entorno.</strong>
-                    <small>Los buenos sistemas previenen errores humanos previsibles.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-legacy-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Pienso en logs, observabilidad y alarmas como parte del producto, no como extras.</strong>
-                    <small>Lo que no se ve bien, se opera mal y se repara peor.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-legacy-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Respeto producción incluso cuando la incidencia presiona.</strong>
-                    <small>La calma y el procedimiento evitan desastres duplicados.</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </section>
-
-          <section class="learning-module reveal" id="craft" data-module="craft" data-module-title="Crecer fuera del horario">
-            <div class="module-head">
-              <div class="module-heading">
-                <p class="section-label">Módulo 05</p>
-                <h2>Crecer fuera del horario importa, pero no confundas madurar con explotarte.</h2>
-                <p class="phase-text">
-                  Si quieres avanzar más rápido, sí, tendrás que aprender también fuera del trabajo algunas temporadas.
-                  Pero hazlo con cabeza. No se trata de trabajar doce horas al día, sino de construir una práctica
-                  sostenible: leer, escribir, probar, repasar fundamentos, observar sistemas reales y cuidar tu energía.
-                </p>
-              </div>
-
-              <div class="module-visual module-visual-acceptance">
-                <div class="acceptance-ring">
-                  <div class="ring-center">
-                    <span>De</span>
-                    <strong>consumir contenido</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="stage-panel-grid">
-              <article class="stage-pane is-active" data-stage-pane="landing">
-                <span class="stage-pane-kicker">Primeros 90 días</span>
-                <h3>Prioriza fundamentos y entendimiento del trabajo que ya tienes delante.</h3>
-                <p>No intentes aprender veinte cosas a la vez ni saltar de moda en moda cada semana.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="traction">
-                <span class="stage-pane-kicker">Entrega fiable</span>
-                <h3>Empieza a consolidar un sistema personal de aprendizaje y documentación.</h3>
-                <p>Lo que aprendes se fija mucho más cuando lo escribes, lo explicas y lo practicas.</p>
-              </article>
-              <article class="stage-pane" data-stage-pane="stewardship">
-                <span class="stage-pane-kicker">Criterio profesional</span>
-                <h3>Tu crecimiento ya combina técnica, comunicación, negocio y autocuidado.</h3>
-                <p>No quieres solo saber más. Quieres sostener una carrera larga sin quemarte ni volverte cínico.</p>
-              </article>
-            </div>
-
-            <div class="task-card">
-              <p class="task-card-title">Checklist de asimilación</p>
-
-              <div class="task-list is-active" data-stage-tasks="landing">
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-craft-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Reservo algo de tiempo semanal para reforzar fundamentos: HTTP, bases de datos, logs, terminal, git, debugging.</strong>
-                    <small>Esos pilares envejecen mucho mejor que las modas.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-craft-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Llevo notas propias de cosas que entiendo, cosas que me faltan y errores que no quiero repetir.</strong>
-                    <small>La memoria externa acelera mucho tu curva de aprendizaje.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="landing-craft-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>No comparo mi capítulo 1 con el capítulo 10 de otra persona.</strong>
-                    <small>Compararte mal solo alimenta ansiedad y mala toma de decisiones.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="traction">
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-craft-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Construyo mini proyectos o ejercicios con objetivo claro, no tutoriales infinitos sin retención real.</strong>
-                    <small>Crear y explicar enseña mucho más que consumir.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-craft-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Aprendo a leer código ajeno y documentación oficial en vez de depender solo de vídeos o respuestitas rápidas.</strong>
-                    <small>Leer bien te da autonomía de verdad.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="traction-craft-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Cuido el descanso y la energía porque una cabeza agotada toma peores decisiones técnicas.</strong>
-                    <small>Reventarte no es compromiso; es una deuda que luego pagas cara.</small>
-                  </span>
-                </label>
-              </div>
-
-              <div class="task-list" data-stage-tasks="stewardship">
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-craft-1" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Mi plan de crecimiento incluye técnica, escritura, comunicación, negocio y capacidad de priorizar.</strong>
-                    <small>Las carreras largas se construyen con amplitud de criterio.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-craft-2" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Comparto lo que aprendo con otros juniors porque explicar fija conocimiento y mejora cultura.</strong>
-                    <small>Enseñar bien es una forma de consolidar tu propio criterio.</small>
-                  </span>
-                </label>
-                <label class="task-item">
-                  <input type="checkbox" data-task="stewardship-craft-3" />
-                  <span class="task-mark" aria-hidden="true"></span>
-                  <span class="task-copy">
-                    <strong>Ya no persigo solo stacks o títulos: persigo capacidad real para resolver problemas sin hacer daño.</strong>
-                    <small>Esa es la diferencia entre crecer y solo acumular etiquetas.</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </section>
-        </div>
+      <div class="hero-marquee-track" aria-hidden="true">
+        <span>debug no es adivinar</span>
+        <span>git no es opcional</span>
+        <span>el usuario importa aunque no lo veas</span>
+        <span>cada entorno tiene sus propias URLs y riesgos</span>
+        <span>tu reputación se construye en los detalles</span>
       </div>
+    </div>
+  </header>
 
-      <section class="section-shell reveal" id="paquetes">
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <p class="section-label">Fuera del horario</p>
-            <h3>Rutina mínima útil</h3>
-            <p class="price-tag">3 a 5 horas por semana</p>
-            <p>
-              Mejor poco y constante que mucho y caótico. Si estás empezando, una rutina sostenible vale oro.
-            </p>
-            <ul class="offer-list">
-              <li>1 hora de fundamentos</li>
-              <li>1 hora de leer código o docs</li>
-              <li>1 hora de práctica corta o notas</li>
-            </ul>
-          </article>
+  <main id="programa" class="program">
+    <section class="story-intro section-shell reveal">
+      <p class="section-label">Antes de empezar</p>
+      <h2>La profesión real no se parece a los ejercicios de clase, y cuanto antes lo entiendas, mejor te irá.</h2>
+      <p>
+        Casi nadie entra al mercado sabiendo leer un sistema ajeno, investigar incidentes, hablar con negocio o pensar
+        en impacto operacional. No es culpa tuya. Pero si quieres crecer, tienes que aceptar una verdad incómoda:
+        tu carrera va a avanzar más por tus hábitos que por tus conocimientos aislados.
+      </p>
+    </section>
 
-          <article class="pricing-card pricing-card-featured">
-            <p class="section-label">Consejo de carrera</p>
-            <h3>No quieras parecer senior en seis meses</h3>
-            <p class="price-tag">Quieres base, no humo</p>
-            <p>
-              Los perfiles más sólidos que he visto no eran los que más hablaban de arquitectura, sino los que
-              construyeron fundamentos duros, buena comunicación y respeto por el detalle.
-            </p>
-            <ul class="offer-list">
-              <li>Domina tu flujo diario</li>
-              <li>Haz menos promesas y cumple más</li>
-              <li>Aprende a escribir lo que piensas</li>
-            </ul>
-          </article>
-
-          <article class="pricing-card">
-            <p class="section-label">Bandera roja</p>
-            <h3>Consumir sin practicar no cuenta</h3>
-            <p class="price-tag">Aprender duele un poco</p>
-            <p>
-              Ver contenido técnico puede inspirarte, pero crecer exige escribir, romper, DEPURAR, leer y volver a intentar.
-            </p>
-            <ul class="offer-list">
-              <li>Menos scroll técnico</li>
-              <li>Más teclado con intención</li>
-              <li>Más explicarte a ti mismo lo aprendido</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell reveal">
-        <div class="timeline-grid">
-          <article class="timeline-card">
-            <span>Semana a semana</span>
-            <strong>Revisa un error que cometiste</strong>
-            <p>Si conviertes errores recientes en lecciones concretas, creces mucho más rápido.</p>
-          </article>
-          <article class="timeline-card">
-            <span>Cada PR</span>
-            <strong>Explica mejor de lo que te gustaría leer</strong>
-            <p>Tu PR debe ahorrar trabajo mental a quien viene detrás.</p>
-          </article>
-          <article class="timeline-card">
-            <span>Cada bug</span>
-            <strong>Deja evidencia de tu investigación</strong>
-            <p>Qué viste, qué descartaste, qué confirmaste y qué riesgo queda.</p>
-          </article>
-          <article class="timeline-card">
-            <span>Cada mes</span>
-            <strong>Aprende una herramienta de verdad</strong>
-            <p>Terminal, debugger, logs, SQL, git o testing. Una bien aprendida vale más que cinco a medias.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="summary-card reveal section-shell" id="impacto">
-        <p class="section-label">Principios base</p>
-        <h2>Si tuviera que resumirte diez años viendo juniors crecer, atascarse o despegar, te diría esto.</h2>
-        <div class="phase-tags">
-          <span>Preguntar bien te hace avanzar más rápido que aparentar seguridad</span>
-          <span>Debug serio siempre gana a tocar por intuición</span>
-          <span>Git dominado te vuelve más profesional en semanas</span>
-          <span>Usuario y cliente importan aunque no estén en la sala</span>
-          <span>Cada entorno tiene URLs, BDs y riesgos propios</span>
-          <span>La carrera se construye con constancia, no con picos de ansiedad</span>
-        </div>
-      </section>
-
-      <section class="closing section-shell" id="cierre">
-        <div class="closing-copy reveal">
-          <p class="section-label">Último consejo</p>
-          <h2>No intentes parecer una persona senior. Intenta ser una persona junior en la que da gusto apoyarse.</h2>
+    <section class="section-shell reveal" id="oferta">
+      <div class="offer-grid">
+        <article class="offer-card offer-card-highlight">
+          <p class="section-label">Qué vas a encontrar aquí</p>
+          <h3>Consejos de trinchera para trabajar mejor desde ya.</h3>
           <p>
-            Si haces eso bien durante suficiente tiempo, todo lo demás acaba llegando: más autonomía, mejores tareas,
-            más confianza, mejor criterio y una carrera mucho más sólida. Lo importante no es sonar grande. Lo importante
-            es convertirte en alguien que ayuda a que el trabajo salga mejor.
+            Nada de "cree en ti" ni listas vacías. Aquí hay criterio operativo: cómo pensar, cómo preguntar, cómo
+            DEPURAR, cómo versionar, cómo probar, cómo escalar dudas y cómo aprender sin reventarte por dentro.
+          </p>
+          <div class="microcopy">
+            <span>Hábitos diarios</span>
+            <span>Reglas de seguridad</span>
+            <span>Crecimiento realista</span>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <p class="section-label">Lo que nadie te dice</p>
+          <ul class="offer-list">
+            <li>No se espera que lo sepas todo, pero sí que aprendas sin esconderte.</li>
+            <li>El código limpio importa, pero entender el problema importa antes.</li>
+            <li>La comunicación pesa tanto como la implementación.</li>
+            <li>Producción castiga la improvisación mucho más que la escuela.</li>
+          </ul>
+        </article>
+
+        <article class="offer-card">
+          <p class="section-label">Lo que sí se espera de ti</p>
+          <ul class="offer-list">
+            <li>Honestidad técnica cuando algo no está claro.</li>
+            <li>Curiosidad disciplinada en vez de toqueteo nervioso.</li>
+            <li>Respeto por el historial, los datos y el trabajo de otros.</li>
+            <li>Capacidad de aprender y mejorar semana a semana.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell reveal">
+      <div class="proof-grid">
+        <article class="proof-card">
+          <strong>Fiabilidad</strong>
+          <p>cumples, avisas, preguntas bien y no escondes riesgos</p>
+        </article>
+        <article class="proof-card">
+          <strong>Método</strong>
+          <p>reproduces, observas, aíslas y decides con evidencia</p>
+        </article>
+        <article class="proof-card">
+          <strong>Criterio</strong>
+          <p>piensas en usuario, cliente, equipo, sistema y coste</p>
+        </article>
+        <article class="proof-card">
+          <strong>Crecimiento</strong>
+          <p>aprendes de forma sostenida sin confundir horas con progreso</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell reveal" id="incendios">
+      <div class="field-guide">
+        <div class="field-guide-head">
+          <p class="section-label">Situaciones reales</p>
+          <h2>Elige tu primer incendio profesional.</h2>
+          <p>
+            Un junior no se hace fuerte leyendo frases bonitas. Se hace fuerte cuando aprende a responder bien
+            en momentos incómodos: bloqueo, bugs raros, PR con comentarios, ramas rotas o miedo a preguntar.
           </p>
         </div>
 
-        <div class="closing-panel reveal">
-          <div class="status-chip">Verdad final</div>
-          <p class="closing-question">La profesión no necesita juniors perfectos. Necesita juniors honestos, curiosos, disciplinados y cada vez más fiables.</p>
-          <div class="phase-tags">
-            <span>Entiende antes de tocar</span>
-            <span>Documenta antes de olvidar</span>
-            <span>Pregunta antes de romper</span>
-            <span>Aprende sin quemarte</span>
-          </div>
-          <a class="button button-primary" href="#top">Volver arriba</a>
+        <div class="incident-grid">
+          <article class="incident-card">
+            <span>01</span>
+            <h3>No entiendo la tarea</h3>
+            <p class="wrong">“No sé hacerlo”.</p>
+            <p class="strong">
+              “Entiendo el objetivo general, pero no tengo claro el caso X. He mirado A y B.
+              ¿Confirmamos el comportamiento esperado?”
+            </p>
+          </article>
+
+          <article class="incident-card">
+            <span>02</span>
+            <h3>Estoy bloqueado</h3>
+            <p class="wrong">Desaparecer tres horas.</p>
+            <p class="strong">
+              “He reproducido el error, descarté permisos y datos, y ahora sospecho de configuración.
+              ¿Lo revisamos diez minutos?”
+            </p>
+          </article>
+
+          <article class="incident-card">
+            <span>03</span>
+            <h3>Mi PR tiene muchos comentarios</h3>
+            <p class="wrong">Tomármelo como un ataque.</p>
+            <p class="strong">
+              “Gracias, voy punto por punto. Marco dudas donde no entienda el criterio y separo
+              cambios funcionales de limpieza.”
+            </p>
+          </article>
+
+          <article class="incident-card">
+            <span>04</span>
+            <h3>He roto algo</h3>
+            <p class="wrong">Ocultarlo o improvisar.</p>
+            <p class="strong">
+              “He detectado que mi cambio provocó X. Estoy revirtiendo/preparando fix.
+              Causa probable: Y. Propongo Z para evitar repetición.”
+            </p>
+          </article>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+    <div class="learning-shell section-shell">
+      <aside class="mission-panel reveal" aria-label="panel de control del itinerario">
+        <div class="mission-card">
+          <p class="section-label">Tu etapa</p>
+          <div class="stage-switcher" role="tablist" aria-label="Cambiar capa de madurez">
+            <button class="stage-tab is-active" type="button" data-stage-tab="landing" role="tab" aria-selected="true">
+              <span>Primeros 90 días</span>
+              <small>sobrevivir sin caos y aprender a orientarte</small>
+            </button>
+            <button class="stage-tab" type="button" data-stage-tab="traction" role="tab" aria-selected="false">
+              <span>Entrega fiable</span>
+              <small>hacer trabajo útil con menos supervisión</small>
+            </button>
+            <button class="stage-tab" type="button" data-stage-tab="stewardship" role="tab" aria-selected="false">
+              <span>Criterio profesional</span>
+              <small>reducir ruido y proteger mejor al equipo</small>
+            </button>
+          </div>
 
-    <!-- check this out! -->
+          <div class="stage-brief">
+            <strong id="stage-name">Primeros 90 días</strong>
+            <p id="stage-description">
+              Tu misión no es impresionar. Es entender el terreno, aprender el flujo y dejar de romper cosas por
+              precipitarte.
+            </p>
+          </div>
 
-    <script src="./scripts/main.js"></script>
-  </body>
+          <div class="progress-ring" role="img" aria-label="Progreso total de la capa activa">
+            <div class="progress-ring-inner">
+              <span id="progress-percent">0%</span>
+              <small>asimilado</small>
+            </div>
+          </div>
+
+          <div class="progress-stats">
+            <div>
+              <strong id="progress-completed">0</strong>
+              <span>items completados</span>
+            </div>
+            <div>
+              <strong id="progress-total">0</strong>
+              <span>items totales</span>
+            </div>
+          </div>
+
+          <button class="button button-secondary panel-button" id="reset-progress" type="button">
+            Reiniciar progreso de esta etapa
+          </button>
+        </div>
+
+        <div class="module-nav-card">
+          <p class="section-label">Mapa de oficio</p>
+          <ol class="module-nav">
+            <li data-module-ref="critical">
+              <a href="#critical">
+                <span>01</span>
+                <strong>La verdad del oficio</strong>
+                <small>qué se espera de ti de verdad</small>
+              </a>
+            </li>
+            <li data-module-ref="autonomy">
+              <a href="#autonomy">
+                <span>02</span>
+                <strong>Debug y pruebas</strong>
+                <small>cómo investigar sin disparar a ciegas</small>
+              </a>
+            </li>
+            <li data-module-ref="testing">
+              <a href="#testing">
+                <span>03</span>
+                <strong>Git y colaboración</strong>
+                <small>historial, PR y cambios seguros</small>
+              </a>
+            </li>
+            <li data-module-ref="legacy">
+              <a href="#legacy">
+                <span>04</span>
+                <strong>Entornos y producción</strong>
+                <small>URLs, datos, logs y respeto por el riesgo</small>
+              </a>
+            </li>
+            <li data-module-ref="craft">
+              <a href="#craft">
+                <span>05</span>
+                <strong>Crecer fuera del horario</strong>
+                <small>aprendizaje, carrera y salud mental</small>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </aside>
+
+      <div class="module-stack">
+        <section class="learning-module reveal" id="critical" data-module="critical"
+          data-module-title="La verdad del oficio">
+          <div class="module-head">
+            <div class="module-heading">
+              <p class="section-label">Módulo 01</p>
+              <h2>La profesión no recompensa al que parece listo. Recompensa al que reduce riesgo y genera confianza.
+              </h2>
+              <p class="phase-text">
+                Te va a ir mejor el día que entiendas esto: en un equipo serio, el valor no está en "saber mucho",
+                sino en ser útil de forma repetible. Eso significa entender antes de tocar, avisar antes de chocar,
+                y pensar antes de defender una idea por orgullo.
+              </p>
+            </div>
+
+            <div class="module-visual module-visual-illusion">
+              <div class="visual-orbit"></div>
+              <div class="quote-stack">
+                <article>
+                  <strong>Modo estudiante</strong>
+                  <p>Quiero acabar la tarea.</p>
+                </article>
+                <article>
+                  <strong>Modo profesional</strong>
+                  <p>Quiero resolver el problema sin crear dos nuevos.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-panel-grid">
+            <article class="stage-pane is-active" data-stage-pane="landing">
+              <span class="stage-pane-kicker">Primeros 90 días</span>
+              <h3>Tu trabajo es ubicarte, entender y no correr más de la cuenta.</h3>
+              <p>Nadie serio espera genialidad instantánea. Sí espera humildad, método y capacidad de escucha.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="traction">
+              <span class="stage-pane-kicker">Entrega fiable</span>
+              <h3>Ya tienes que dejar menos supervisión y menos incertidumbre detrás.</h3>
+              <p>Empiezas a ser alguien a quien se le pueden delegar cambios concretos con confianza.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="stewardship">
+              <span class="stage-pane-kicker">Criterio profesional</span>
+              <h3>Tu presencia mejora conversaciones, no solo tickets.</h3>
+              <p>Aquí se nota que piensas como parte del sistema, no como una persona aislada con teclado.</p>
+            </article>
+          </div>
+
+          <div class="task-card">
+            <p class="task-card-title">Checklist de asimilación</p>
+
+            <div class="task-list is-active" data-stage-tasks="landing">
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-critical-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Dejo de medir mi valor por la velocidad y empiezo a medirlo por la fiabilidad.</strong>
+                  <small>Ir rápido rompiendo cosas no impresiona a nadie durante mucho tiempo.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-critical-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Cuando no entiendo algo, digo exactamente qué parte no entiendo.</strong>
+                  <small>La precisión al preguntar es una skill diferencial desde muy pronto.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-critical-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Escucho más de lo que defiendo mi primera idea.</strong>
+                  <small>Tu primera lectura del sistema casi nunca será la correcta del todo.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="traction">
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-critical-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Antes de proponer una solución, puedo resumir el problema, el impacto y el riesgo.</strong>
+                  <small>Eso te saca del modo ejecutor y te mete en modo profesional.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-critical-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Aviso pronto cuando algo amenaza plazo, calidad o entendimiento.</strong>
+                  <small>Las malas noticias dadas temprano son gestionables. Tarde, no.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-critical-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Diferencio urgencia de ruido y petición de necesidad real.</strong>
+                  <small>No todo lo que grita fuerte merece tocarse primero.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="stewardship">
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-critical-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Ayudo a otros a trabajar con calma cuando hay presión.</strong>
+                  <small>La serenidad bien fundada es una forma de liderazgo técnico.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-critical-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Puedo explicar decisiones técnicas sin esconderme detrás de jerga.</strong>
+                  <small>Si no puedes traducirlo, probablemente no lo entiendes lo suficiente.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-critical-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Mi criterio reduce errores evitables y discusiones vacias.</strong>
+                  <small>Eso vale mucho más que cualquier pose de persona brillante.</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="learning-module reveal" id="autonomy" data-module="autonomy"
+          data-module-title="Debug y pruebas">
+          <div class="module-head">
+            <div class="module-heading">
+              <p class="section-label">Módulo 02</p>
+              <h2>Debug no es tocar cosas hasta que desaparece el error. Debug es investigar.</h2>
+              <p class="phase-text">
+                Si haces carrera en software, vas a pasar una parte enorme de tu vida depurando sistemas rotos,
+                incompletos o raros. Cuanto antes desarrolles un método de investigación, antes dejarás de sentir
+                que todo bug es un ataque personal a tu inteligencia.
+              </p>
+            </div>
+
+            <div class="module-visual module-visual-console">
+              <div class="console-frame">
+                <span>síntoma observado</span>
+                <span>hipótesis concreta</span>
+                <span>prueba aislada</span>
+                <span>causa confirmada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-panel-grid">
+            <article class="stage-pane is-active" data-stage-pane="landing">
+              <span class="stage-pane-kicker">Primeros 90 días</span>
+              <h3>Primero reproduce y observa. No cambies cinco cosas a la vez.</h3>
+              <p>Logs, inputs, pasos, entorno y datos valen más que intuiciones dramáticas.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="traction">
+              <span class="stage-pane-kicker">Entrega fiable</span>
+              <h3>Tu investigación ya debe dejar una ruta clara desde el fallo hasta la causa.</h3>
+              <p>Escalas mejor, te ayudas mejor y corriges con mucha menos lotería.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="stewardship">
+              <span class="stage-pane-kicker">Criterio profesional</span>
+              <h3>No solo arreglas bugs: mejoras la capacidad del sistema para explicarse.</h3>
+              <p>Observabilidad, logs útiles y documentación de causa raíz también forman parte del oficio.</p>
+            </article>
+          </div>
+
+          <div class="task-card">
+            <p class="task-card-title">Checklist de asimilación</p>
+
+            <div class="task-list is-active" data-stage-tasks="landing">
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-autonomy-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Antes de tocar código, intento reproducir el problema de forma estable.</strong>
+                  <small>Si no puedes reproducirlo, tu fix será mucho más débil de lo que crees.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-autonomy-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Uso la consola, logs y breakpoints para responder preguntas concretas.</strong>
+                  <small>No se trata de imprimir por imprimir; se trata de obtener evidencia.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-autonomy-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Separo síntoma, sospecha y causa confirmada.</strong>
+                  <small>Esa separación mental te ahorra muchos parches falsos.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="traction">
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-autonomy-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Cuando escalo un bug, aporto pasos, entorno, datos, evidencias y mi mejor hipótesis.</strong>
+                  <small>Escalar con contexto demuestra madurez, no debilidad.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-autonomy-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>No mezclo arreglo, refactor y limpieza estética cuando estoy corrigiendo un bug
+                    delicado.</strong>
+                  <small>Un cambio enfocado es mucho más seguro y revisable.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-autonomy-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Después del fix, pienso cómo probar que no rompí otra cosa alrededor.</strong>
+                  <small>El trabajo no termina cuando desaparece el error visible.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="stewardship">
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-autonomy-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Identifico patrones de fallos repetidos y propongo mejoras para prevenirlos.</strong>
+                  <small>Buen debug también mejora el sistema, no solo el ticket actual.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-autonomy-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Me preocupo por los mensajes de error, trazas y señales que verá quien depure
+                    después.</strong>
+                  <small>Hoy depuras tú; mañana puede DEPURAR otra persona medio dormida a las 3 AM.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-autonomy-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Enseño procesos de investigación, no soluciones mágicas que nadie entiende.</strong>
+                  <small>El equipo crece cuando el método se comparte.</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="learning-module reveal" id="testing" data-module="testing"
+          data-module-title="Git y colaboracion">
+          <div class="module-head">
+            <div class="module-heading">
+              <p class="section-label">Módulo 03</p>
+              <h2>Git no es una molestia alrededor del trabajo. Git es una parte central del trabajo.</h2>
+              <p class="phase-text">
+                Si no dominas git, vas a sufrir más de la cuenta y vas a hacer sufrir al equipo. Tu historial,
+                tus commits y tus PR dicen mucho de tu forma de pensar. Un junior fuerte aprende pronto que versionar
+                bien no es una formalidad: es seguridad, claridad y colaboración.
+              </p>
+            </div>
+
+            <div class="module-visual module-visual-matrix">
+              <div class="matrix-grid">
+                <span>status</span>
+                <span>diff</span>
+                <span>commit</span>
+                <span>branch</span>
+                <span>review</span>
+                <span>rollback</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-panel-grid">
+            <article class="stage-pane is-active" data-stage-pane="landing">
+              <span class="stage-pane-kicker">Primeros 90 días</span>
+              <h3>Aprende a leer tu estado actual antes de hacer comandos por reflejo.</h3>
+              <p>Qué cambiaste, dónde estás, contra qué comparas y qué vas a subir debería quedarte claro siempre.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="traction">
+              <span class="stage-pane-kicker">Entrega fiable</span>
+              <h3>Tus commits y PR ya deben facilitar la revisión en vez de sabotearla.</h3>
+              <p>Un buen diff cuenta una historia limpia, reversible y facil de entender.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="stewardship">
+              <span class="stage-pane-kicker">Criterio profesional</span>
+              <h3>Usas git para investigar, proteger despliegues y hacer mejor al equipo.</h3>
+              <p>Ya no solo versionas código. Gestionas riesgo y trazabilidad.</p>
+            </article>
+          </div>
+
+          <div class="task-card">
+            <p class="task-card-title">Checklist de asimilación</p>
+
+            <div class="task-list is-active" data-stage-tasks="landing">
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-testing-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Antes de commitear, reviso mi diff y entiendo cada línea que subí.</strong>
+                  <small>Si no lo entiendes tú, menos lo entenderá quien revise.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-testing-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Hago commits pequeños con mensajes útiles y con una sola intención principal.</strong>
+                  <small>Un historial limpio te salva más veces de las que imaginas.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-testing-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>No pego comandos de internet o del chat sin entender qué efecto tendrán en mi rama e
+                    historial.</strong>
+                  <small>Git castiga la obediencia automática.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="traction">
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-testing-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Mis PR explican qué cambia, por qué cambia, cómo lo probé y qué riesgo veo.</strong>
+                  <small>La revisión mejora mucho cuando entregas contexto, no solo código.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-testing-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Cuando hay conflictos, resuelvo entendiendo ambas versiones, no pulsando aceptar por
+                    cansancio.</strong>
+                  <small>Muchos bugs nacen exactamente ahí.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-testing-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Pienso en revertibilidad: si esto sale mal, sé qué camino nos deja volver atrás con menos
+                    daño.</strong>
+                  <small>Trabajar con red de seguridad es una marca de madurez.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="stewardship">
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-testing-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Uso el historial para investigar regresiones y entender decisiones pasadas.</strong>
+                  <small>Git también es memoria operativa del equipo.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-testing-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Ayudo a otros a mejorar la calidad de sus PR con feedback claro y respetuoso.</strong>
+                  <small>La revisión de código bien hecha forma personas, no solo corrige líneas.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-testing-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Se distinguir cuando una operacion de git es segura y cuando es mejor pedir apoyo
+                    antes.</strong>
+                  <small>El orgullo también rompe historial.</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="learning-module reveal" id="legacy" data-module="legacy"
+          data-module-title="Entornos y producción">
+          <div class="module-head">
+            <div class="module-heading">
+              <p class="section-label">Módulo 04</p>
+              <h2>Desarrollo, QA, pre y producción no son el mismo sitio con distinto color. Son mundos distintos.</h2>
+              <p class="phase-text">
+                Te tienes que grabar esto en fuego: cada entorno tiene sus propias URLs, bases de datos, servidores,
+                credenciales, volumen de datos, permisos y riesgos. Confundirlos no es un despiste simpático; puede
+                costar dinero, confianza o una incidencia seria.
+              </p>
+            </div>
+
+            <div class="module-visual module-visual-diagram">
+              <div class="diagram-grid">
+                <article><strong>Local</strong><span>para romper y aprender</span></article>
+                <article><strong>QA</strong><span>para validar flujos</span></article>
+                <article><strong>Pre</strong><span>para acercarte a la realidad</span></article>
+                <article><strong>Prod</strong><span>para respetarla mucho</span></article>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-panel-grid">
+            <article class="stage-pane is-active" data-stage-pane="landing">
+              <span class="stage-pane-kicker">Primeros 90 días</span>
+              <h3>Aprende qué entorno estás mirando antes de mirar cualquier otra cosa.</h3>
+              <p>Una URL, una base de datos o un log mal interpretado te pueden llevar a decisiones pésimas.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="traction">
+              <span class="stage-pane-kicker">Entrega fiable</span>
+              <h3>Ya debes sospechar pronto de configuración, permisos, datos y dependencias externas.</h3>
+              <p>Muchos fallos no son de código puro, sino de integración y contexto.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="stewardship">
+              <span class="stage-pane-kicker">Criterio profesional</span>
+              <h3>Tu forma de trabajar reduce la probabilidad de errores de entorno y despliegue.</h3>
+              <p>Ayudas a que lo peligroso sea visible y a que los límites estén mejor definidos.</p>
+            </article>
+          </div>
+
+          <div class="task-card">
+            <p class="task-card-title">Checklist de asimilación</p>
+
+            <div class="task-list is-active" data-stage-tasks="landing">
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-legacy-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Confirmo siempre en qué entorno estoy antes de probar, DEPURAR o tocar datos.</strong>
+                  <small>Hazlo aunque te parezca obvio. Los errores graves suelen empezar por algo "obvio".</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-legacy-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Entiendo que cada entorno tiene sus propias URLs, bases de datos, servidores y
+                    credenciales.</strong>
+                  <small>No se copian configuraciones ni se asumen equivalencias a ciegas.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-legacy-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>No hardcodeo secretos ni comparto accesos como si fueran apuntes de clase.</strong>
+                  <small>La seguridad profesional empieza por pequeños hábitos.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="traction">
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-legacy-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Cuando algo falla, reviso también variables, permisos, datos de prueba, colas, cron y
+                    servicios externos.</strong>
+                  <small>El sistema real es más grande que tu módulo.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-legacy-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Documento incidencias indicando entorno exacto, pasos, hora, datos y dependencias
+                    implicadas.</strong>
+                  <small>Sin ese contexto, muchas investigaciones arrancan cojas.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-legacy-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Recuerdo siempre que "en local funciona" no demuestra casi nada por sí solo.</strong>
+                  <small>Permisos, datos y tráfico reales cuentan otra historia.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="stewardship">
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-legacy-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Propongo convenciones y validaciones para que sea más difícil confundirse de entorno.</strong>
+                  <small>Los buenos sistemas previenen errores humanos previsibles.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-legacy-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Pienso en logs, observabilidad y alarmas como parte del producto, no como extras.</strong>
+                  <small>Lo que no se ve bien, se opera mal y se repara peor.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-legacy-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Respeto producción incluso cuando la incidencia presiona.</strong>
+                  <small>La calma y el procedimiento evitan desastres duplicados.</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="learning-module reveal" id="craft" data-module="craft"
+          data-module-title="Crecer fuera del horario">
+          <div class="module-head">
+            <div class="module-heading">
+              <p class="section-label">Módulo 05</p>
+              <h2>Crecer fuera del horario importa, pero no confundas madurar con explotarte.</h2>
+              <p class="phase-text">
+                Si quieres avanzar más rápido, sí, tendrás que aprender también fuera del trabajo algunas temporadas.
+                Pero hazlo con cabeza. No se trata de trabajar doce horas al día, sino de construir una práctica
+                sostenible: leer, escribir, probar, repasar fundamentos, observar sistemas reales y cuidar tu energía.
+              </p>
+            </div>
+
+            <div class="module-visual module-visual-acceptance">
+              <div class="acceptance-ring">
+                <div class="ring-center">
+                  <span>De</span>
+                  <strong>consumir contenido</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-panel-grid">
+            <article class="stage-pane is-active" data-stage-pane="landing">
+              <span class="stage-pane-kicker">Primeros 90 días</span>
+              <h3>Prioriza fundamentos y entendimiento del trabajo que ya tienes delante.</h3>
+              <p>No intentes aprender veinte cosas a la vez ni saltar de moda en moda cada semana.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="traction">
+              <span class="stage-pane-kicker">Entrega fiable</span>
+              <h3>Empieza a consolidar un sistema personal de aprendizaje y documentación.</h3>
+              <p>Lo que aprendes se fija mucho más cuando lo escribes, lo explicas y lo practicas.</p>
+            </article>
+            <article class="stage-pane" data-stage-pane="stewardship">
+              <span class="stage-pane-kicker">Criterio profesional</span>
+              <h3>Tu crecimiento ya combina técnica, comunicación, negocio y autocuidado.</h3>
+              <p>No quieres solo saber más. Quieres sostener una carrera larga sin quemarte ni volverte cínico.</p>
+            </article>
+          </div>
+
+          <div class="task-card">
+            <p class="task-card-title">Checklist de asimilación</p>
+
+            <div class="task-list is-active" data-stage-tasks="landing">
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-craft-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Reservo algo de tiempo semanal para reforzar fundamentos: HTTP, bases de datos, logs,
+                    terminal, git, debugging.</strong>
+                  <small>Esos pilares envejecen mucho mejor que las modas.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-craft-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Llevo notas propias de cosas que entiendo, cosas que me faltan y errores que no quiero
+                    repetir.</strong>
+                  <small>La memoria externa acelera mucho tu curva de aprendizaje.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="landing-craft-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>No comparo mi capítulo 1 con el capítulo 10 de otra persona.</strong>
+                  <small>Compararte mal solo alimenta ansiedad y mala toma de decisiones.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="traction">
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-craft-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Construyo mini proyectos o ejercicios con objetivo claro, no tutoriales infinitos sin
+                    retención real.</strong>
+                  <small>Crear y explicar enseña mucho más que consumir.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-craft-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Aprendo a leer código ajeno y documentación oficial en vez de depender solo de vídeos o
+                    respuestitas rápidas.</strong>
+                  <small>Leer bien te da autonomía de verdad.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="traction-craft-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Cuido el descanso y la energía porque una cabeza agotada toma peores decisiones
+                    técnicas.</strong>
+                  <small>Reventarte no es compromiso; es una deuda que luego pagas cara.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="task-list" data-stage-tasks="stewardship">
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-craft-1" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Mi plan de crecimiento incluye técnica, escritura, comunicación, negocio y capacidad de
+                    priorizar.</strong>
+                  <small>Las carreras largas se construyen con amplitud de criterio.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-craft-2" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Comparto lo que aprendo con otros juniors porque explicar fija conocimiento y mejora
+                    cultura.</strong>
+                  <small>Enseñar bien es una forma de consolidar tu propio criterio.</small>
+                </span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" data-task="stewardship-craft-3" />
+                <span class="task-mark" aria-hidden="true"></span>
+                <span class="task-copy">
+                  <strong>Ya no persigo solo stacks o títulos: persigo capacidad real para resolver problemas sin hacer
+                    daño.</strong>
+                  <small>Esa es la diferencia entre crecer y solo acumular etiquetas.</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="section-shell reveal" id="paquetes">
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <p class="section-label">Fuera del horario</p>
+          <h3>Rutina mínima útil</h3>
+          <p class="price-tag">3 a 5 horas por semana</p>
+          <p>
+            Mejor poco y constante que mucho y caótico. Si estás empezando, una rutina sostenible vale oro.
+          </p>
+          <ul class="offer-list">
+            <li>1 hora de fundamentos</li>
+            <li>1 hora de leer código o docs</li>
+            <li>1 hora de práctica corta o notas</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card pricing-card-featured">
+          <p class="section-label">Consejo de carrera</p>
+          <h3>No quieras parecer senior en seis meses</h3>
+          <p class="price-tag">Quieres base, no humo</p>
+          <p>
+            Los perfiles más sólidos que he visto no eran los que más hablaban de arquitectura, sino los que
+            construyeron fundamentos duros, buena comunicación y respeto por el detalle.
+          </p>
+          <ul class="offer-list">
+            <li>Domina tu flujo diario</li>
+            <li>Haz menos promesas y cumple más</li>
+            <li>Aprende a escribir lo que piensas</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <p class="section-label">Bandera roja</p>
+          <h3>Consumir sin practicar no cuenta</h3>
+          <p class="price-tag">Aprender duele un poco</p>
+          <p>
+            Ver contenido técnico puede inspirarte, pero crecer exige escribir, romper, DEPURAR, leer y volver a
+            intentar.
+          </p>
+          <ul class="offer-list">
+            <li>Menos scroll técnico</li>
+            <li>Más teclado con intención</li>
+            <li>Más explicarte a ti mismo lo aprendido</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell reveal">
+      <div class="timeline-grid">
+        <article class="timeline-card">
+          <span>Semana a semana</span>
+          <strong>Revisa un error que cometiste</strong>
+          <p>Si conviertes errores recientes en lecciones concretas, creces mucho más rápido.</p>
+        </article>
+        <article class="timeline-card">
+          <span>Cada PR</span>
+          <strong>Explica mejor de lo que te gustaría leer</strong>
+          <p>Tu PR debe ahorrar trabajo mental a quien viene detrás.</p>
+        </article>
+        <article class="timeline-card">
+          <span>Cada bug</span>
+          <strong>Deja evidencia de tu investigación</strong>
+          <p>Qué viste, qué descartaste, qué confirmaste y qué riesgo queda.</p>
+        </article>
+        <article class="timeline-card">
+          <span>Cada mes</span>
+          <strong>Aprende una herramienta de verdad</strong>
+          <p>Terminal, debugger, logs, SQL, git o testing. Una bien aprendida vale más que cinco a medias.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="summary-card reveal section-shell" id="impacto">
+      <p class="section-label">Principios base</p>
+      <h2>Si tuviera que resumirte diez años viendo juniors crecer, atascarse o despegar, te diría esto.</h2>
+      <div class="phase-tags">
+        <span>Preguntar bien te hace avanzar más rápido que aparentar seguridad</span>
+        <span>Debug serio siempre gana a tocar por intuición</span>
+        <span>Git dominado te vuelve más profesional en semanas</span>
+        <span>Usuario y cliente importan aunque no estén en la sala</span>
+        <span>Cada entorno tiene URLs, BDs y riesgos propios</span>
+        <span>La carrera se construye con constancia, no con picos de ansiedad</span>
+      </div>
+    </section>
+
+    <section class="closing section-shell" id="cierre">
+      <div class="closing-copy reveal">
+        <p class="section-label">Último consejo</p>
+        <h2>No intentes parecer una persona senior. Intenta ser una persona junior en la que da gusto apoyarse.</h2>
+        <p>
+          Si haces eso bien durante suficiente tiempo, todo lo demás acaba llegando: más autonomía, mejores tareas,
+          más confianza, mejor criterio y una carrera mucho más sólida. Lo importante no es sonar grande. Lo importante
+          es convertirte en alguien que ayuda a que el trabajo salga mejor.
+        </p>
+      </div>
+
+      <div class="closing-panel reveal">
+        <div class="status-chip">Verdad final</div>
+        <p class="closing-question">La profesión no necesita juniors perfectos. Necesita juniors honestos, curiosos,
+          disciplinados y cada vez más fiables.</p>
+        <div class="phase-tags">
+          <span>Entiende antes de tocar</span>
+          <span>Documenta antes de olvidar</span>
+          <span>Pregunta antes de romper</span>
+          <span>Aprende sin quemarte</span>
+        </div>
+        <a class="button button-primary" href="#top">Volver arriba</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- check this out! -->
+
+  <script src="./scripts/main.js"></script>
+</body>
+
 </html>
