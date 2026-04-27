@@ -9,8 +9,11 @@ const progressRing = document.querySelector(".progress-ring");
 const resetButton = document.getElementById("reset-progress");
 const stageName = document.getElementById("stage-name");
 const stageDescription = document.getElementById("stage-description");
+const themeToggle = document.getElementById("theme-toggle");
+const themeToggleLabel = themeToggle?.querySelector(".theme-toggle-label");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const STORAGE_KEY = "developers-al-borde-stage-progress";
+const THEME_STORAGE_KEY = "developers-al-borde-theme";
 
 const STAGE_META = {
   landing: {
@@ -28,6 +31,32 @@ const STAGE_META = {
 };
 
 let currentStage = document.body.dataset.stage || "landing";
+
+const readTheme = () => {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+};
+
+const writeTheme = (theme) => {
+  localStorage.setItem(THEME_STORAGE_KEY, theme);
+};
+
+const applyTheme = (theme) => {
+  const isLight = theme === "light";
+  document.body.dataset.theme = isLight ? "light" : "dark";
+
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+    themeToggle.setAttribute("aria-label", isLight ? "Cambiar a tema oscuro" : "Cambiar a tema claro");
+  }
+
+  if (themeToggleLabel) {
+    themeToggleLabel.textContent = isLight ? "Tema: claro" : "Tema: oscuro";
+  }
+};
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -159,6 +188,12 @@ resetButton?.addEventListener("click", () => {
   updateProgress();
 });
 
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+  applyTheme(nextTheme);
+  writeTheme(nextTheme);
+});
+
 const moduleObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -198,6 +233,7 @@ const updateParallax = () => {
 };
 
 hydrateProgress();
+applyTheme(readTheme() || "dark");
 applyStage(currentStage);
 updateParallax();
 window.addEventListener("scroll", updateParallax, { passive: true });

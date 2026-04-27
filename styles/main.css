@@ -117,6 +117,12 @@ div {
   padding-top: 1.4rem;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .brand,
 .section-label,
 .card-kicker,
@@ -165,6 +171,50 @@ div {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.03);
   transition: transform 180ms ease, border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10.5rem;
+  min-height: 2.7rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 143, 63, 0.32);
+  color: var(--text);
+  background: rgba(255, 143, 63, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.theme-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: "Cascadia Code", "Consolas", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.theme-toggle-label::before {
+  content: "◐";
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .toplink:hover,
@@ -850,15 +900,15 @@ div {
   content: attr(data-module-title);
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 3rem;
   color: rgba(255, 255, 255, 0.045);
-  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  font-size: clamp(1.2rem, 4.4vw, 2.9rem);
   font-weight: 900;
   line-height: 0.94;
   letter-spacing: -0.06em;
   text-transform: uppercase;
   text-align: right;
-  max-width: 40%;
+  max-width: 36%;
   pointer-events: none;
 }
 
@@ -1183,6 +1233,205 @@ div {
   text-transform: uppercase;
 }
 
+body[data-theme="light"] {
+  color: #1a2940;
+  background:
+    radial-gradient(circle at top left, rgba(255, 143, 63, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 16%, rgba(89, 208, 194, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(255, 224, 130, 0.09), transparent 26%),
+    linear-gradient(180deg, #fbfcff 0%, #f5f8fc 28%, #eef3f8 70%, #f8fbff 100%);
+}
+
+body[data-theme="light"]::before {
+  background:
+    linear-gradient(90deg, rgba(26, 41, 64, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(26, 41, 64, 0.03) 1px, transparent 1px);
+  opacity: 0.16;
+}
+
+body[data-theme="light"]::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 24%, transparent 76%, rgba(205, 220, 235, 0.18));
+}
+
+body[data-theme="light"] .noise {
+  opacity: 0.12;
+  background-image:
+    radial-gradient(rgba(26, 41, 64, 0.06) 0.6px, transparent 0.6px),
+    radial-gradient(rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px);
+}
+
+body[data-theme="light"] .page-glow-left {
+  background: radial-gradient(circle at 12% 18%, rgba(255, 143, 63, 0.14), transparent 28%);
+}
+
+body[data-theme="light"] .page-glow-right {
+  background: radial-gradient(circle at 88% 12%, rgba(89, 208, 194, 0.12), transparent 24%);
+}
+
+body[data-theme="light"] .hero-text,
+body[data-theme="light"] .story-intro p,
+body[data-theme="light"] .phase-text,
+body[data-theme="light"] .closing-copy p,
+body[data-theme="light"] .summary-card p,
+body[data-theme="light"] #stage-description,
+body[data-theme="light"] .offer-card p,
+body[data-theme="light"] .proof-card p,
+body[data-theme="light"] .pricing-card p,
+body[data-theme="light"] .timeline-card p,
+body[data-theme="light"] .dashboard-card p,
+body[data-theme="light"] .quote-stack p,
+body[data-theme="light"] .stage-pane p,
+body[data-theme="light"] .offer-list li,
+body[data-theme="light"] .signal-list li,
+body[data-theme="light"] .diagram-grid span {
+  color: #4d617d;
+}
+
+body[data-theme="light"] .brand,
+body[data-theme="light"] .toplink,
+body[data-theme="light"] .theme-toggle,
+body[data-theme="light"] .section-label,
+body[data-theme="light"] .hero-pills li,
+body[data-theme="light"] .microcopy span,
+body[data-theme="light"] .status-chip,
+body[data-theme="light"] .task-card-title,
+body[data-theme="light"] .stage-pane-kicker,
+body[data-theme="light"] .progress-ring-inner small,
+body[data-theme="light"] .timeline-card span,
+body[data-theme="light"] .module-nav li small,
+body[data-theme="light"] .progress-stats span,
+body[data-theme="light"] .task-copy small {
+  color: #6f8098;
+}
+
+body[data-theme="light"] .eyebrow {
+  color: #b26a12;
+}
+
+body[data-theme="light"] .stage-tab span,
+body[data-theme="light"] .stage-tab.is-active span {
+  color: #1d314d;
+}
+
+body[data-theme="light"] .stage-tab small,
+body[data-theme="light"] .stage-tab.is-active small {
+  color: #5f7390;
+}
+
+body[data-theme="light"] .hero-marquee {
+  color: rgba(42, 75, 112, 0.78);
+}
+
+body[data-theme="light"] .hero-marquee span::after {
+  color: var(--accent);
+}
+
+body[data-theme="light"] .hero-pills li,
+body[data-theme="light"] .microcopy span,
+body[data-theme="light"] .phase-tags span {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(42, 75, 112, 0.14);
+  color: #51647f;
+}
+
+body[data-theme="light"] .hero-copy h1,
+body[data-theme="light"] .story-intro h2,
+body[data-theme="light"] .module-heading h2,
+body[data-theme="light"] .summary-card h2,
+body[data-theme="light"] .closing-copy h2,
+body[data-theme="light"] .closing-question,
+body[data-theme="light"] .dashboard-card strong,
+body[data-theme="light"] .task-copy strong,
+body[data-theme="light"] .module-nav strong,
+body[data-theme="light"] .progress-stats strong,
+body[data-theme="light"] .stage-pane h3,
+body[data-theme="light"] #stage-name,
+body[data-theme="light"] .proof-card strong,
+body[data-theme="light"] .timeline-card strong,
+body[data-theme="light"] .diagram-grid strong,
+body[data-theme="light"] .quote-stack strong,
+body[data-theme="light"] .ring-center strong,
+body[data-theme="light"] .progress-ring-inner span {
+  color: #1d314d;
+}
+
+body[data-theme="light"] .dashboard-card,
+body[data-theme="light"] .mission-card,
+body[data-theme="light"] .module-nav-card,
+body[data-theme="light"] .task-card,
+body[data-theme="light"] .summary-card,
+body[data-theme="light"] .closing-panel,
+body[data-theme="light"] .quote-stack article,
+body[data-theme="light"] .learning-module,
+body[data-theme="light"] .stage-pane,
+body[data-theme="light"] .offer-card,
+body[data-theme="light"] .proof-card,
+body[data-theme="light"] .pricing-card,
+body[data-theme="light"] .timeline-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(42, 75, 112, 0.12);
+  box-shadow: 0 24px 80px rgba(73, 96, 128, 0.12);
+}
+
+body[data-theme="light"] .module-visual,
+body[data-theme="light"] .task-item,
+body[data-theme="light"] .module-nav li a,
+body[data-theme="light"] .stage-tab,
+body[data-theme="light"] .toplink,
+body[data-theme="light"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.58);
+  border-color: rgba(42, 75, 112, 0.12);
+}
+
+body[data-theme="light"] .module-visual-console,
+body[data-theme="light"] .module-visual-matrix,
+body[data-theme="light"] .module-visual-diagram {
+  background:
+    linear-gradient(180deg, rgba(241, 246, 252, 0.92), rgba(229, 238, 248, 0.82)),
+    radial-gradient(circle at top, rgba(89, 208, 194, 0.08), transparent 36%);
+}
+
+body[data-theme="light"] .console-frame span,
+body[data-theme="light"] .matrix-grid span,
+body[data-theme="light"] .diagram-grid article,
+body[data-theme="light"] .quote-stack article {
+  background: rgba(245, 249, 254, 0.92);
+  border-color: rgba(42, 75, 112, 0.12);
+  color: #1c314e;
+}
+
+body[data-theme="light"] .progress-ring {
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.98) 58%, transparent 59%),
+    conic-gradient(var(--accent) 0 var(--progress), rgba(42, 75, 112, 0.1) var(--progress) 100%);
+  box-shadow: inset 0 0 30px rgba(73, 96, 128, 0.08);
+}
+
+body[data-theme="light"] .progress-stats div {
+  background: rgba(244, 248, 253, 0.88);
+  border-color: rgba(42, 75, 112, 0.1);
+}
+
+body[data-theme="light"] .task-mark {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(42, 75, 112, 0.18);
+}
+
+body[data-theme="light"] .learning-module::before {
+  color: rgba(26, 41, 64, 0.06);
+}
+
+body[data-theme="light"] .toplink:hover,
+body[data-theme="light"] .toplink:focus-visible,
+body[data-theme="light"] .theme-toggle:hover,
+body[data-theme="light"] .theme-toggle:focus-visible,
+body[data-theme="light"] .module-nav li a:hover,
+body[data-theme="light"] .module-nav li a:focus-visible,
+body[data-theme="light"] .task-item:hover,
+body[data-theme="light"] .task-item:focus-within {
+  background: rgba(89, 208, 194, 0.1);
+}
+
 .reveal {
   opacity: 0;
   transform: translate3d(0, calc(30px + var(--float-offset)), 0);
@@ -1289,7 +1538,8 @@ div {
   }
 
   .learning-module::before {
-    max-width: 60%;
+    right: 1.2rem;
+    max-width: 54%;
   }
 }
 
@@ -1323,6 +1573,12 @@ div {
   .topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-copy h1 {
