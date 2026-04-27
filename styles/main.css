@@ -1616,3 +1616,157 @@ body[data-theme="light"] .task-item:focus-within {
     letter-spacing: 0.08em;
   }
 }
+
+/* ==========================================================
+   Field Guide / Situaciones reales
+   ========================================================== */
+
+.field-guide {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(145deg, rgba(255, 143, 63, 0.1), rgba(89, 208, 194, 0.06)),
+    var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+}
+
+.field-guide::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent 70%);
+  opacity: 0.86;
+}
+
+.field-guide-head {
+  position: relative;
+  z-index: 1;
+  max-width: 52rem;
+  margin-bottom: 1.4rem;
+}
+
+.field-guide-head h2 {
+  margin: 0 0 1rem;
+  font-family: "Bahnschrift Condensed", "Arial Narrow", "Franklin Gothic Medium", sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.field-guide-head p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.incident-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.incident-card {
+  position: relative;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.incident-card:hover,
+.incident-card:focus-within {
+  transform: translateY(-3px);
+  border-color: rgba(89, 208, 194, 0.32);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.incident-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-2), transparent 72%);
+  opacity: 0.65;
+}
+
+.incident-card span {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+  font-family: "Cascadia Code", "Consolas", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+}
+
+.incident-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.45rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.incident-card p {
+  margin: 0.8rem 0 0;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.incident-card .wrong {
+  color: var(--muted);
+}
+
+.incident-card .strong {
+  color: var(--text);
+}
+
+.incident-card .wrong::before {
+  content: "Mal → ";
+  color: var(--danger);
+  font-weight: 800;
+}
+
+.incident-card .strong::before {
+  content: "Mejor → ";
+  color: var(--accent-2);
+  font-weight: 800;
+}
+
+@media (max-width: 1120px) {
+  .incident-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .field-guide {
+    padding: 1.2rem;
+  }
+
+  .incident-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .incident-card {
+    padding: 1.15rem;
+  }
+}
